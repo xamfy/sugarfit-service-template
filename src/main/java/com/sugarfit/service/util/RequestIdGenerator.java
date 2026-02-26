@@ -1,4 +1,14 @@
 package com.sugarfit.service.util;
 
-public class RequestIdGenerator {
+import java.util.UUID;
+
+public final class RequestIdGenerator {
+
+    private RequestIdGenerator() {
+        // Prevent instantiation
+    }
+
+    public static String generate() {
+        return UUID.randomUUID().toString();
+    }
 }
